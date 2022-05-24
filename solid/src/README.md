@@ -14,7 +14,8 @@
     -       the larger interfaces split into smaller ones
         If there can be multiple sub-groups of interfaces then we should divide them
 - ##### D: Dependency Inversion: 
-    -       
+    -       high / low level modules' details depend upon abstraction
+        high level modules should not depend on low level modules; both should depend on abstractions. Abstractions should not depend on details.  Details should depend upon abstractions
 #### WHY SOLID:
   - To develop software with considerations for maintaining and extending as the project grows.
   - To avoiding code smells, refactoring code, and Agile or Adaptive software development
