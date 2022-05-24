@@ -11,9 +11,10 @@
     -       Child Class should be substitutable by its Parent Classes
         Developer should not be under-impression that he is updating a different object
 - ##### I: Interface Segregation: 
-    -       
+    -       the larger interfaces split into smaller ones
+        If there can be multiple sub-groups of interfaces then we should divide them
 - ##### D: Dependency Inversion: 
-
+    -       
 #### WHY SOLID:
   - To develop software with considerations for maintaining and extending as the project grows.
   - To avoiding code smells, refactoring code, and Agile or Adaptive software development

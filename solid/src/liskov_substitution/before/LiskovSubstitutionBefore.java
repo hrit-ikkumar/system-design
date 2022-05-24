@@ -23,4 +23,6 @@ public class LiskovSubstitutionBefore {
       - Developer doesn't know what is updating. He is under-impression that he is
       - updating rectangle object but square object is updating the variables here
       - In brief, Child class must be completely substitutable by its parent class
+
+      - If we replace Rectangle class with Square class, we will find un-expected behaviour
  */
