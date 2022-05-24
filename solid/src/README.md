@@ -7,8 +7,11 @@
     -       Open for extension but closed for modification
         
         the module should be open for extension but closed for modification
-- ##### I: Interface Segregation: 
 - ##### L: Liskov Substitution: 
+    -       Child Class should be substitutable by its Parent Classes
+        Developer should not be under-impression that he is updating a different object
+- ##### I: Interface Segregation: 
+    -       
 - ##### D: Dependency Inversion: 
 
 #### WHY SOLID:
