@@ -14,3 +14,5 @@
 #### WHY SOLID:
   - To develop software with considerations for maintaining and extending as the project grows.
   - To avoiding code smells, refactoring code, and Agile or Adaptive software development
+
+Tips: Don't use '-' in package name
