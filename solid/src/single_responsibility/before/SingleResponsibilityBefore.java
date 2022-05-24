@@ -2,7 +2,7 @@ package single_responsibility.before;
 
 import java.time.LocalDate;
 
-class SingleResponsibility {
+class SingleResponsibilityBefore {
     public static void main(String args[]) {
         LocalDate dob = LocalDate.of(2000, 8, 15);
         Person p = new Person("Hritik", dob, "Neem Ka Thana");
