@@ -7,3 +7,7 @@ public class BuilderAfterInnerClassApproach {
         System.out.println(user.toString());
     }
 }
+/*
+    Examples:
+        1. StringBuilder, CharBuffer, ByteBuffer
+ */
