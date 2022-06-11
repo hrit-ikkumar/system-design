@@ -32,4 +32,10 @@ public class BuilderBefore {
         2. If we want to keep some properties optional then we need to create constructor
         3. Lengthy process
         4. If there are n optional properties then n! constructor will be there
+
+
+     Approaches:
+     1. Using constructors or null pass => length and inefficient
+     2. Setter methods => makes object mutable
+     3. Using Builder Design pattern => makes object immutable and easy code
  */
