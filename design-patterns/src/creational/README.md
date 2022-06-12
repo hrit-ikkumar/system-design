@@ -1,8 +1,9 @@
 ####1.Creational Design Pattern
-   - Factory Pattern
+   - Builder Pattern
+   - Simple Factory
+   - Factory Pattern/ Factory Method Pattern
    - Abstract Factory Pattern
-   - Singleton Pattern
    - Prototype Pattern
-   - Builder Pattern.
+   - Singleton Pattern
 
 `Creational design patterns are concerned with the way of creating objects`
