@@ -4,6 +4,7 @@
 2. For example, a car can have different features in it but all car doesn't require them
 3. It reduces complexity of creation of constructor based on optional properties. 
 4. It also help us to create immutable objects. 
+5. It is used to create complex objects
 
 ### Example in Java
         StringBuilder, CharBuffer, ByteBuffer
