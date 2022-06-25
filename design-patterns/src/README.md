@@ -1,12 +1,12 @@
 # Design Patterns
 
-- ####1.Creational Design Pattern
+- #### 1.Creational Design Pattern
     - Factory Pattern
     - Abstract Factory Pattern
     - Singleton Pattern
     - Prototype Pattern
     - Builder Pattern.
-* ####2. Structural Design Pattern
+* #### 2. Structural Design Pattern
     - Adapter Pattern
     - Bridge Pattern
     - Composite Pattern
@@ -14,7 +14,7 @@
     - Facade Pattern
     - Flyweight Pattern
     - Proxy Pattern
-* ####3. Behavioral Design Pattern
+* #### 3. Behavioral Design Pattern
     - Chain Of Responsibility Pattern
     - Command Pattern
     - Interpreter Pattern
