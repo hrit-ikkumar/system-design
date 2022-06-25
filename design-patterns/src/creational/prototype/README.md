@@ -1,4 +1,8 @@
 # Prototype Design Pattern
+`Mainly used to make copy of object.`
+
+`We can implement clonable interface to do that`
+
 1. It is used when we want to create the copy of object.
 2. It is used when creation of object is very costly operation.
 3. We implement this pattern by cloning the object (clone method).
