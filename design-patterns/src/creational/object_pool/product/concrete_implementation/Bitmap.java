@@ -14,7 +14,7 @@ public class Bitmap implements Image {
 
     @Override
     public void draw() {
-        location.distance(2,4);
+        System.out.println(location.getX() + ", " + location.getY());
     }
 
     @Override
