@@ -47,7 +47,9 @@ public class SinglyLinkedList<T> implements LinkedList<T> {
         if(tale == null) {
             tale = head = new Node(element, null);
         } else {
-            tale = new Node(element, tale);
+            Node newNode = new Node(element, null);
+            tale.next = newNode;
+            tale = newNode;
         }
         size += 1;
     }
