@@ -8,12 +8,4 @@ public class EmployeeClassAdapter extends Employee implements Customer {
     public String getName() {
         return this.getFullName();
     }
-    @Override
-    public String getPhoneNumber() {
-        return this.getPhoneNumber();
-    }
-    @Override
-    public String getLocation() {
-        return this.getLocation();
-    }
 }
