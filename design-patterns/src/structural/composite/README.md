@@ -1,5 +1,5 @@
 # Composite Design Pattern
-`Consider Composities and leaf nodes in same way`
+`Consider Composities and leaf nodes in same way, implement same interface and make one as leaf and other as composities`
 
 1. We have parent-child or whole-part relation between objects. We can use composite pattern to simplify dealing with such object arrangements.
 2. Goal of composite pattern is to simplify the client code by allowing it to treat the composites and leaf nodes in same way.
