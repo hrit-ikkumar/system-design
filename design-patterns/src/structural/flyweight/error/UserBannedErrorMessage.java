@@ -3,7 +3,7 @@ package structural.flyweight.error;
 import java.time.Duration;
 
 // Unshared concrete flyweight
-// Exrinsic state
+// Don't have any intrinsic state
 public class UserBannedErrorMessage implements ErrorMessage{
 
     // All state is defined here

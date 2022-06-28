@@ -1,7 +1,7 @@
 package structural.flyweight.error;
 
 // A concrete Flyweight. Instance is shared
-// Intrinsic state
+// Intrinsic state contains and takes extrinsic as argument
 public class SystemErrorMessage implements ErrorMessage{
     // some error message $errorCode
     private String messageTemplate;
