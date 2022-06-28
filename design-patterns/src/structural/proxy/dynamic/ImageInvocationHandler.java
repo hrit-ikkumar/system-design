@@ -1,8 +1,8 @@
 package structural.proxy.dynamic;
 
-import com.coffeepoweredcrew.proxy.BitmapImage;
-import com.coffeepoweredcrew.proxy.Image;
 import javafx.geometry.Point2D;
+import structural.proxy.non_dynamic.image.BitmapImage;
+import structural.proxy.non_dynamic.image.Image;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
