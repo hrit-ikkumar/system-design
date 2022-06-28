@@ -1,5 +1,5 @@
 # Flyweight Design Pattern
-`Separate Shared and Non-Shared things and store sharable things into Flyweight and calculate non-sharable state on fly, Reduces no of object creation in code`
+`Separate Shared (intrinsic) and Non-Shared (extrinsic) things and store sharable things into Flyweight and calculate non-sharable state on fly, Reduces no of object creation in code`
 
 1. We use flyweight design pattern if we need large number of objects of class where we can easily separate out state that can be shared and state that can be externalized.
 2. Flyweights store only "intrinsic" state or state that can be shared in any context.
@@ -9,4 +9,4 @@
     1. Intrinsic state: Sharable state with flyweight context, state-independent, stored in flyweight
     2. Extrinsic state: Passed to flyweight, This is dependent state for flyweight, Need to calculated on the fly
     
-``
+`Wrapper classes in java like Integer, Byte uses flyweight design pattern in cache of values in valueOf() method which is factory method`
