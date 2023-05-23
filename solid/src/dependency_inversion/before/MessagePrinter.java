@@ -5,19 +5,22 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class MessagePrinter {
-    public void writeMessageToFile(Message msg, Formatter formatter, Writter writter) throws IOException {
-        writter.println(formatter.format(msg));
-        writter.flush();
+    public void writeMessageToFile(Message msg, String fileName) throws IOException {
+        // High Level modules depend upon the low level modules --> RED flag, they should depend upon abstraction
+
+        JSONFormatter formatter = new JSONFormatter();
+        PrintWriter writer =  new PrintWriter(new FileWriter(fileName));
+
+        writer.println(formatter.format(msg));
+        writer.flush();
     }
 }
 /*
     Violation of Dependency Inversion Principle
     - High-level modules should not depend on the low-level module but both should depend on the abstraction.
     - the abstraction does not depend on detail but the detail depends on abstraction.
-    - We have solved the problem by using abstraction of Formatter and Writter
-    - We don't need to relay on method we can simply pass the dependency to method
-    - It helps us to have different implementation and safety of method/class
-    - Here MessagePrinter's writeMessageToFile is not tightly coupled with JSONFormatter/PrintWriter.
+
+    - Here MessagePrinter's writeMessageToFile is tightly coupled with JSONFormatter/PrintWriter.
 
     - High-Level Modules: Interface/Abstraction that your client uses.
     - Low-Level Modules: Details of your interfaces/abstraction

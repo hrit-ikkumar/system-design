@@ -1,4 +1,4 @@
-package dependency_inversion.before;
+package dependency_inversion.after.writer;
 
 import java.io.PrintStream;
 import java.io.PrintWriter;

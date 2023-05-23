@@ -1,4 +1,4 @@
-package dependency_inversion.after;
+package dependency_inversion.after.message;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
