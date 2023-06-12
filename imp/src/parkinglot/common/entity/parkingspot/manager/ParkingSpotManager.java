@@ -3,6 +3,7 @@ package parkinglot.common.entity.parkingspot.manager;
 import parkinglot.common.constants.VehicleType;
 import parkinglot.common.entity.parkingspot.ParkingSpot;
 import parkinglot.common.entity.parkingspot.strategy.spot.ParkingStrategy;
+import parkinglot.common.entity.ticket.Ticket;
 import parkinglot.common.entity.vehicle.Vehicle;
 
 import java.util.ArrayList;
@@ -45,14 +46,15 @@ public abstract class ParkingSpotManager {
         throw new Exception("Couldn't park the vehicle");
     }
 
-    public void removeVehicle(Vehicle vehicle, ParkingSpot parkingSpot) throws Exception{
+    public void removeVehicle(Ticket ticket) throws Exception{
         if(parkingSpotList == null) {
             throw new Exception("Parking Lot doesn't have any parking spot");
         }
 
         for(ParkingSpot ps: parkingSpotList) {
-            if(ps.equals(parkingSpot)) {
-                ps.parkVehicle(vehicle);
+            if(ps.equals(ticket.getParkingSpot())) {
+                ps.removeVehicle();
+                return;
             }
         }
         throw new Exception("Couldn't remove the vehicle from parking slot");

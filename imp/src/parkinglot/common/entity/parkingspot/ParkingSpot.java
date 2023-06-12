@@ -2,6 +2,8 @@ package parkinglot.common.entity.parkingspot;
 
 import parkinglot.common.entity.vehicle.Vehicle;
 
+import java.util.Objects;
+
 public abstract class ParkingSpot {
     private int id;
     private boolean isEmpty = true;
@@ -24,5 +26,27 @@ public abstract class ParkingSpot {
 
     public Vehicle vehicle() {
         return vehicle;
+    }
+
+    @Override
+    public String toString() {
+        return "ParkingSpot{" +
+                "id=" + id +
+                ", isEmpty=" + isEmpty +
+                ", vehicle=" + vehicle +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ParkingSpot that = (ParkingSpot) o;
+        return id == that.id && isEmpty == that.isEmpty && Objects.equals(vehicle, that.vehicle);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, isEmpty, vehicle);
     }
 }

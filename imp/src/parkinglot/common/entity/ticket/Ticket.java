@@ -33,4 +33,13 @@ public class Ticket {
     public void setParkingSpot(ParkingSpot parkingSpot) {
         this.parkingSpot = parkingSpot;
     }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "entryTime=" + entryTime +
+                ", vehicle=" + vehicle +
+                ", parkingSpot=" + parkingSpot +
+                '}';
+    }
 }

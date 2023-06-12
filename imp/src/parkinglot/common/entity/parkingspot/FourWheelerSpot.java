@@ -4,4 +4,6 @@ public class FourWheelerSpot extends ParkingSpot {
     public double price() {
         return 10;
     }
+
+
 }
