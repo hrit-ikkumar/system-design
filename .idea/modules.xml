@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Prep.iml" filepath="$PROJECT_DIR$/.idea/Prep.iml" />
       <module fileurl="file://$PROJECT_DIR$/design-patterns/design-patterns.iml" filepath="$PROJECT_DIR$/design-patterns/design-patterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsa/dsa.iml" filepath="$PROJECT_DIR$/dsa/dsa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imp/imp.iml" filepath="$PROJECT_DIR$/imp/imp.iml" />
       <module fileurl="file://$PROJECT_DIR$/solid/solid.iml" filepath="$PROJECT_DIR$/solid/solid.iml" />
     </modules>
   </component>

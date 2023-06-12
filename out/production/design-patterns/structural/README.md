@@ -1,4 +1,5 @@
 # 2. Structural Design Pattern
+`Concerned with Object structure and class composition/inheritance`
 1. Adapter Design Pattern
 2. Bridge Design Pattern
 3. Decorator Design Pattern
