@@ -1,39 +1,40 @@
 package parkinglot;
 
-import parkinglot.common.constants.VehicleType;
-import parkinglot.common.entity.entrance.EntranceGate;
-import parkinglot.common.entity.exit.ExitGate;
-import parkinglot.common.entity.parkingspot.ParkingSpot;
-import parkinglot.common.entity.parkingspot.TwoWheelerSpot;
-import parkinglot.common.entity.parkingspot.manager.ParkingSpotManager;
-import parkinglot.common.entity.parkingspot.manager.factory.ParkingManagerFactory;
-import parkinglot.common.entity.ticket.Ticket;
-import parkinglot.common.entity.vehicle.Vehicle;
+import parkinglot.dao.constants.Command;
+import parkinglot.dao.constants.VehicleType;
+import parkinglot.dao.entity.entrance.EntranceGate;
+import parkinglot.dao.entity.exit.ExitGate;
+import parkinglot.dao.entity.parkingspot.ParkingSpot;
+import parkinglot.dao.entity.parkingspot.TwoWheelerSpot;
+import parkinglot.services.ParkingSpotManager;
+import parkinglot.services.TwoWheelerPSManager;
+import parkinglot.services.factory.ParkingManagerFactory;
+import parkinglot.dao.entity.ticket.Ticket;
+import parkinglot.dao.entity.vehicle.Vehicle;
+
+import java.util.Scanner;
 
 public class Driver {
     public static void main(String args[]) throws Exception {
-        // Vehicle Came
-        Vehicle vehicle = new Vehicle(1, VehicleType.TWO_WHEELER);
-        // create enterance gate
-        EntranceGate entranceGate = new EntranceGate(vehicle.getVehicleType());
 
-        // Parking Spot Manager
-        ParkingManagerFactory parkingManagerFactory = new ParkingManagerFactory();
-        ParkingSpotManager parkingSpotManager = parkingManagerFactory.getParkingSpotManager(vehicle.getVehicleType());
-        // Parking Spot
-        ParkingSpot parkingSpot = new TwoWheelerSpot();
-        // added one parking spot
-        parkingSpotManager.addParkingSpot(parkingSpot);
+        ParkingSpotManager parkingSpotManager = new TwoWheelerPSManager();
 
-        entranceGate.bookSpot(vehicle, parkingSpot);
-        Ticket ticket = entranceGate.generateTicket(vehicle, parkingSpot);
-        System.out.println(ticket.toString());
-        System.out.println(parkingSpot);
-        // unpark the
-        ExitGate exitGate = new ExitGate();
-        double price = exitGate.price(ticket);
-        System.out.println(price);
-        exitGate.removeVehicle(ticket);
-        System.out.println(parkingSpot);
+        while(true) {
+            Scanner scan = new Scanner(System.in);
+            Command type = Command.of(scan.next());
+            switch(type) {
+                case CREATE_PARKING_LOT:
+                    parkingSpotManager = new TwoWheelerPSManager();
+                    break;
+                case PARK_VEHICLE:
+                    parkingSpotManager.parkVehicle(new Vehicle(scan.nextInt(), VehicleType.TWO_WHEELER), parkingSpotManager.findParkingSpot());
+                    break;
+                case DISPLAY:
+                    System.out.println(parkingSpotManager.toString());
+                    break;
+                case EXIT:
+                    return;
+            }
+        }
     }
 }
